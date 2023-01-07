@@ -1,0 +1,18 @@
+{
+  "nome": "Lucas Peixoto",
+  "cidade": "Extremoz",
+  "numero": "848312831",
+  "livros-favoritos": [
+    "harry potter",
+    "cronicas nordicas",
+    "seja a pessoa certa no lugar certo"
+  ],
+  "hobbies": {
+    "semana": "academia",
+    "fim-de-semana": {
+      "sabado": "arrumar o quarto",
+      "domingo": "andar de moto",
+      "outros": ["jogar", "assistir", "ler"]
+    }
+  }
+}
