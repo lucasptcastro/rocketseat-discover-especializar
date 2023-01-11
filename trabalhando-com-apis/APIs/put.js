@@ -15,7 +15,7 @@ let author = "Lucas";
 // Mostra qual o resultado atual da variável "author"
 app.route("/").get((request, response) => response.send(author));
 
-// Recebe o resultado da atualização da variável "author" que foi realizada diretamente na api
+// Recebe o resultado da atualização da variável "author" que foi realizada no insomnia
 app.route("/").put((request, response) => {
   author = request.body.author;
   response.send(author);
