@@ -7,8 +7,8 @@ function getUsers() {
     .catch((error) => console.error(error));
 }
 
-function getUser() {
-  fetch(`${url}/6`)
+function getUser(id) {
+  fetch(`${url}/${id}`)
     .then((result) => result.json())
     .then((data) => {
       (userName.textContent = data.name),
@@ -31,12 +31,32 @@ function addUser(newUser) {
     .catch((error) => console.error(error));
 }
 
+function updateUser(updatedUser, id) {
+  fetch(`${url}/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(updatedUser),
+    headers: {
+      "Content-type": "application/json;chartset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => (alertApi.textContent = data))
+    .catch((error) => console.error(error));
+}
+
 const user = {
   name: "Alvo Dumbledore",
   avatar: "https://picsum.photos/200/300",
   city: "Godric's Hollow",
 };
 
+const updatedUser = {
+  name: "Harry Potter",
+  avatar: "https://picsum.photos/200/300",
+  city: "Godric's Hollow",
+};
+
+updateUser(updatedUser, 5);
+
 getUsers();
-getUser();
-addUser(user);
+getUser(5);
