@@ -44,6 +44,18 @@ function updateUser(updatedUser, id) {
     .catch((error) => console.error(error));
 }
 
+function deleteUser(id) {
+  fetch(`${url}/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json;chartset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => (alertApi.textContent = data))
+    .catch((error) => console.error(error));
+}
+
 const user = {
   name: "Alvo Dumbledore",
   avatar: "https://picsum.photos/200/300",
@@ -59,4 +71,6 @@ const updatedUser = {
 updateUser(updatedUser, 5);
 
 getUsers();
+addUser(user);
 getUser(5);
+deleteUser(3);
