@@ -1,5 +1,18 @@
 const url = "http://localhost:5500/api";
 
+const user = {
+  name: "Alvo Dumbledore",
+  avatar: "https://picsum.photos/200/300",
+  city: "Godric's Hollow",
+};
+
+const updatedUser = {
+  name: "Harry Potter",
+  avatar: "https://picsum.photos/200/300",
+  city: "Godric's Hollow",
+};
+
+// Função para listar todos os usuário da API
 function getUsers() {
   fetch(url)
     .then((result) => result.json())
@@ -7,6 +20,7 @@ function getUsers() {
     .catch((error) => console.error(error));
 }
 
+// Função para litar um usuário específico da API
 function getUser(id) {
   fetch(`${url}/${id}`)
     .then((result) => result.json())
@@ -18,6 +32,7 @@ function getUser(id) {
     .catch((error) => console.error(error));
 }
 
+// Função para adicionar um usuário na API
 function addUser(newUser) {
   fetch(url, {
     method: "POST",
@@ -31,6 +46,7 @@ function addUser(newUser) {
     .catch((error) => console.error(error));
 }
 
+// Função para atualizar um usuário na API
 function updateUser(updatedUser, id) {
   fetch(`${url}/${id}`, {
     method: "PUT",
@@ -44,6 +60,7 @@ function updateUser(updatedUser, id) {
     .catch((error) => console.error(error));
 }
 
+// Função para deletar um usuário na API
 function deleteUser(id) {
   fetch(`${url}/${id}`, {
     method: "DELETE",
@@ -55,18 +72,6 @@ function deleteUser(id) {
     .then((data) => (alertApi.textContent = data))
     .catch((error) => console.error(error));
 }
-
-const user = {
-  name: "Alvo Dumbledore",
-  avatar: "https://picsum.photos/200/300",
-  city: "Godric's Hollow",
-};
-
-const updatedUser = {
-  name: "Harry Potter",
-  avatar: "https://picsum.photos/200/300",
-  city: "Godric's Hollow",
-};
 
 updateUser(updatedUser, 5);
 
