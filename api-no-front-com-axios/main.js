@@ -22,6 +22,7 @@ function getUsers() {
     .catch((error) => console.error(error));
 }
 
+// Função para adicionar um usuário na API
 function addNewUser(newUser) {
   axios
     .post(url, newUser)
@@ -29,6 +30,7 @@ function addNewUser(newUser) {
     .catch((error) => console.error(error));
 }
 
+// Função para litar um usuário específico da API
 function getUser(id) {
   axios.get(`${url}/${id}`).then((response) => {
     userName.textContent = response.data.name;
@@ -38,6 +40,7 @@ function getUser(id) {
   });
 }
 
+// Função para atualizar um usuário na API
 function updateUser(id, updatedUser) {
   axios
     .put(`${url}/${id}`, updatedUser)
@@ -45,6 +48,7 @@ function updateUser(id, updatedUser) {
     .catch((error) => console.error(error));
 }
 
+// Função para deletar um usuário na API
 function deleteUser(id) {
   axios
     .delete(`${url}/${id}`)
