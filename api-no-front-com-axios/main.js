@@ -6,6 +6,12 @@ const newUser = {
   city: "Godric's Hollow",
 };
 
+const updatedUser = {
+  name: "Tom Riddle",
+  avatar: "https://picsum.photos/id/237/200/300",
+  city: "Orfanotrofio Wool",
+};
+
 // Função para listar todos os usuário da API
 function getUsers() {
   axios
@@ -32,6 +38,14 @@ function getUser(id) {
   });
 }
 
+function updateUser(id, updatedUser) {
+  axios
+    .put(`${url}/${id}`, updatedUser)
+    .then((response) => console.log(response))
+    .catch((error) => console.error(error));
+}
+
 getUsers();
 // addNewUser(newUser);
-getUser(1);
+getUser(2);
+updateUser(4, updatedUser);
