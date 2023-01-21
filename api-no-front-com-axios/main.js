@@ -45,7 +45,15 @@ function updateUser(id, updatedUser) {
     .catch((error) => console.error(error));
 }
 
+function deleteUser(id) {
+  axios
+    .delete(`${url}/${id}`)
+    .then((response) => console.log(response))
+    .catch((error) => console.error(error));
+}
+
 getUsers();
-// addNewUser(newUser);
+addNewUser(newUser);
 getUser(2);
 updateUser(4, updatedUser);
+deleteUser(5);
