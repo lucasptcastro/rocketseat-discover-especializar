@@ -1,4 +1,4 @@
-import React, { useState } from "React";
+import React, { useState } from "react";
 import { Card } from "../../components/Card";
 import "./style.css";
 
@@ -43,7 +43,7 @@ export function Home() {
 
       {/* Aqui está listando cada elemento do array "students" de acordo com os valores do objeto  */}
       {students.map((student) => (
-        <Card name={student.name} time={student.time} />
+        <Card key={student.time} name={student.name} time={student.time} />
       ))}
     </div>
   );
