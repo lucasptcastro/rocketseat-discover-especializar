@@ -4,10 +4,31 @@ import "./style.css";
 
 export function Home() {
   const [studentName, setStudentName] = useState("");
+  const [students, setStudents] = useState([]);
 
+  function handleAddStudent() {
+    const newStudent = {
+      name: studentName,
+      time: new Date().toLocaleTimeString("pt-br", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }),
+    };
+
+    /*
+
+    ° O estado do "setStudents" está sendo alterado para o prevState(o estado anterior) mais o newStudent para assim acoplar os estudantes anteriores com os novos
+
+    ° Está usando o "Spred operator" (...) para adicionar todos os antigos estudantes no "prevState" fora do vetor
+    
+    */
+
+    setStudents((prevState) => [...prevState, newStudent]);
+  }
   return (
     <div className="container">
-      <h1>Nome: {studentName}</h1>
+      <h1>Lista de Presença</h1>
 
       {/* O 'onChange' serve para pegar cada atualização do input através do e.target.value */}
       <input
@@ -16,11 +37,14 @@ export function Home() {
         onChange={(e) => setStudentName(e.target.value)}
       />
 
-      <button type="button">Adicionar</button>
+      <button type="button" onClick={handleAddStudent}>
+        Adicionar
+      </button>
 
-      <Card name="Tom Riddle" time="07:01:14" />
-      <Card name="Alvo Dumbledore" time="07:03:29" />
-      <Card name="Harry Potter" time="07:04:52" />
+      {/* Aqui está listando cada elemento do array "students" de acordo com os valores do objeto  */}
+      {students.map((student) => (
+        <Card name={student.name} time={student.time} />
+      ))}
     </div>
   );
 }
