@@ -28,7 +28,16 @@ export function Home() {
   }
   return (
     <div className="container">
-      <h1>Lista de Presença</h1>
+      <header>
+        <h1>Lista de Presença</h1>
+        <div>
+          <strong>Lucas</strong>
+          <img
+            src="https://github.com/lucasptcastro.png"
+            alt="Foto de perfil"
+          />
+        </div>
+      </header>
 
       {/* O 'onChange' serve para pegar cada atualização do input através do e.target.value */}
       <input
