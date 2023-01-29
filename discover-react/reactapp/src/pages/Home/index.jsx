@@ -30,15 +30,20 @@ export function Home() {
 
   /* 
   
-  Hook criad para consumir a api do github e retornar o nome e avatar para o hook do
+  Hook criado para consumir a api do github e retornar o nome e avatar para o hook do
   "user"
 
   */
   useEffect(() => {
-    fetch("https://api.github.com/users/lucasptcastro")
-      .then((response) => response.json())
-      .then((data) => setUser({ name: data.name, avatar: data.avatar_url }));
-  }, [students]);
+    async function fetchData() {
+      const response = await fetch(
+        "https://api.github.com/users/lucasptcastro"
+      );
+      const data = await response.json();
+      setUser({ name: data.name, avatar: data.avatar_url });
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="container">
