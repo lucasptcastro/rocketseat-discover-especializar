@@ -5,6 +5,7 @@ import "./style.css";
 export function Home() {
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState([]);
+  const [user, setUser] = useState({ name: "", avatar: "" });
 
   function handleAddStudent() {
     const newStudent = {
@@ -28,7 +29,9 @@ export function Home() {
   }
 
   useEffect(() => {
-    console.log("useEffect chamado!");
+    fetch("https://api.github.com/users/lucasptcastro")
+      .then((response) => response.json())
+      .then((data) => setUser({ name: data.name, avatar: data.avatar_url }));
   }, [students]);
 
   return (
@@ -36,11 +39,8 @@ export function Home() {
       <header>
         <h1>Lista de Presença</h1>
         <div>
-          <strong>Lucas</strong>
-          <img
-            src="https://github.com/lucasptcastro.png"
-            alt="Foto de perfil"
-          />
+          <strong>{user.name}</strong>
+          <img src={user.avatar} alt="Foto de perfil" />
         </div>
       </header>
 
