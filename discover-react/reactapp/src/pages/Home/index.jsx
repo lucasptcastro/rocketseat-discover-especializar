@@ -28,6 +28,12 @@ export function Home() {
     setStudents((prevState) => [...prevState, newStudent]);
   }
 
+  /* 
+  
+  Hook criad para consumir a api do github e retornar o nome e avatar para o hook do
+  "user"
+
+  */
   useEffect(() => {
     fetch("https://api.github.com/users/lucasptcastro")
       .then((response) => response.json())
