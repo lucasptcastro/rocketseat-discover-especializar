@@ -1,10 +1,14 @@
-// ERROS DE TIPAGEM:
+/* 
 
-const userName = "Lucas";
-userName();
+"user: string | null" = o "user" pode ser string ou nulo
+"user ?? "Usário padrão"" = se o "user" for nulo, vai retornar "Usuário padrão"
 
-function sum(a: number, b: number) {
-  return a + b;
+*/
+
+function showTicket(user: string | null, ticket: number) {
+  console.log(
+    `Olá ${user ?? "Usário padrão"}. Seu número de bilhete é ${ticket}`
+  );
 }
-sum.toLowerCase();
-sum("10", 5);
+
+showTicket(null, 123);
