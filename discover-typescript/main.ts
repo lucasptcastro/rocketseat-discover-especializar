@@ -23,3 +23,13 @@ Tipagem inferida: indica a tipagem no valor da variável
 
 let user: string = "Lucas"; // Tipagem explícita
 let newUser: "Felipe"; // Tipagem inferida
+
+/* ==========================================================
+
+Tipos primitivos:
+
+*/
+
+let loading: boolean = false;
+let email: string = "teste@gmail.com";
+let prince: number = 10.5;
