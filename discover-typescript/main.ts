@@ -33,3 +33,12 @@ Tipos primitivos:
 let loading: boolean = false;
 let email: string = "teste@gmail.com";
 let prince: number = 10.5;
+
+/* ==========================================================
+
+Matrizes (dá para usar das duas formas abaixo):
+
+*/
+
+let numbers: number[] = [1, 2, 3, 4, 5];
+let users: Array<string> = ["Lucas", "Felipe", "Vanessa"];
