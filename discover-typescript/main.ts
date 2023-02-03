@@ -42,3 +42,19 @@ Matrizes (dá para usar das duas formas abaixo):
 
 let numbers: number[] = [1, 2, 3, 4, 5];
 let users: Array<string> = ["Lucas", "Felipe", "Vanessa"];
+
+/* ==========================================================
+
+Funções:
+
+*/
+
+// O tipo "void" significa que a função não tem retorno
+function showMessage(message: string): void {
+  console.log(message);
+}
+
+// O tipo "number" significa que a função vai retornar  um número
+function sumNumbers(a: number, b: number): number {
+  return a + b;
+}
