@@ -58,3 +58,13 @@ function showMessage(message: string): void {
 function sumNumbers(a: number, b: number): number {
   return a + b;
 }
+
+/* ==========================================================
+
+O operador union "|" serve como um "ou", ou seja:
+o parametro "id" pode receber um number ou uma string
+
+*/
+function printUserId(id: number | string) {
+  console.log(`O ID do usuário é: ${id}`);
+}
