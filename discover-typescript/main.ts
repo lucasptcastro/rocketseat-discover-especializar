@@ -13,3 +13,15 @@ function showTicket(user: string | null, ticket: any) {
   );
 }
 showTicket(null, 123);
+
+/*  ==========================================================
+
+Generics:
+
+  S => State
+  T => Type
+  V => Value
+  K => Key
+  E => Element 
+  
+*/
