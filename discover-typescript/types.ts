@@ -44,3 +44,16 @@ function printUserId(id: number | string) {
 }
 
 ("==========================================================");
+
+//  Types: criar uma variável com uma tipagem que possa ser usada
+//  diversas vezes
+
+type IdType = string | number | undefined;
+
+let userId: IdType;
+let adminId: IdType;
+
+userId = "15";
+adminId = false;
+
+("==========================================================");
