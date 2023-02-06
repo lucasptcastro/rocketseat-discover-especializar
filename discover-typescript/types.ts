@@ -23,6 +23,23 @@ let users: Array<string> = ["Lucas", "Felipe", "Vanessa"];
 
 ("==========================================================");
 
+//  Objetos:
+
+type User = {
+  name: string;
+  age: number;
+  height: number;
+};
+
+function userData(user: User) {
+  console.log(`Nome do usuário: ${user.name}`);
+  console.log(`Idade: ${user.age}`);
+  console.log(`Altura: ${user.height}`);
+}
+
+userData({ name: "Lucas", age: 21, height: 170 });
+("==========================================================");
+
 //  Funções:
 
 //  O tipo "void" significa que a função não tem retorno
