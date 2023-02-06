@@ -1,4 +1,4 @@
-("==========================================================");
+("======================== Tipagens =========================");
 
 //  Tipagem explícita: indica a tipagem ao lado da variável
 //  Tipagem inferida: indica a tipagem no valor da variável
@@ -6,24 +6,18 @@
 let user: string = "Lucas"; // Tipagem explícita
 let newUser: "Felipe"; // Tipagem inferida
 
-("==========================================================");
-
-//  Tipos primitivos:
+("==================== Tipos primitivos ====================");
 
 let loading: boolean = false;
 let email: string = "teste@gmail.com";
 let prince: number = 10.5;
 
-("==========================================================");
-
-//  Matrizes (dá para usar das duas formas abaixo):
+("======================= Matrizes =========================");
 
 let numbers: number[] = [1, 2, 3, 4, 5];
 let users: Array<string> = ["Lucas", "Felipe", "Vanessa"];
 
-("==========================================================");
-
-//  Objetos:
+("======================== Objetos =========================");
 
 type User = {
   name: string;
@@ -38,9 +32,8 @@ function userData(user: User) {
 }
 
 userData({ name: "Lucas", age: 21, height: 170 });
-("==========================================================");
 
-//  Funções:
+("======================= Funções ==========================");
 
 //  O tipo "void" significa que a função não tem retorno
 function showMessage(message: string): void {
