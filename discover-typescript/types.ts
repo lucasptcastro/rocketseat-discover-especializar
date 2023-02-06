@@ -46,7 +46,7 @@ function printUserId(id: number | string) {
 ("==========================================================");
 
 //  Types: criar uma variável com uma tipagem que possa ser usada
-//  diversas vezes
+//  diversas vezes. Tem que iniciar com letra maiúscula
 
 type IdType = string | number | undefined;
 
@@ -55,5 +55,19 @@ let adminId: IdType;
 
 userId = "15";
 adminId = false;
+
+("==========================================================");
+
+//  Type Assertion: define os tipos de alguma variável
+
+type UserResponse = {
+  id: number;
+  name: string;
+  avatar: string;
+};
+
+// A tipagem do "{}" vai ser a de "UserResponse"
+let userResponse = {} as UserResponse;
+userResponse.avatar;
 
 ("==========================================================");
