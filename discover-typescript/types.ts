@@ -82,3 +82,24 @@ let userResponse = {} as UserResponse;
 userResponse.avatar;
 
 ("==========================================================");
+
+// Junção de duas types
+
+type UserInfo = {
+  id: number;
+  name: string;
+};
+
+type Char = {
+  level: number;
+  nickName: string;
+};
+
+type Player = UserInfo & Char;
+
+let player: Player = {
+  id: 5,
+  level: 15,
+  name: "Lucas",
+  nickName: "Raroni",
+};
