@@ -23,6 +23,7 @@ type User = {
   name: string;
   age: number;
   height: number;
+  isAdmin?: boolean; // O "?" signiica que o valor é opicional
 };
 
 function userData(user: User) {
