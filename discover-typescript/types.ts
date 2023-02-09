@@ -117,3 +117,16 @@ function getUser(user: User2) {
 }
 
 ("==========================================================");
+
+// Junção de duas interfaces
+
+interface IUser {
+  id: number;
+  nome: String;
+}
+
+interface IPayment {
+  method: string;
+}
+
+interface IAccount extends IUser, IPayment {}
