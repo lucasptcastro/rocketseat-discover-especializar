@@ -1,9 +1,9 @@
-import './styles.css';
+import "./styles.css";
 
 export type CardProps = {
   name: string;
   time: string;
-}
+};
 
 export function Card(props: CardProps) {
   return (
@@ -11,5 +11,5 @@ export function Card(props: CardProps) {
       <strong>{props.name}</strong>
       <small>{props.time}</small>
     </div>
-  )
+  );
 }
