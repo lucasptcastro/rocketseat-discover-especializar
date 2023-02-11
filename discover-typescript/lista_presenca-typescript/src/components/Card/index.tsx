@@ -1,9 +1,9 @@
 import "./styles.css";
 
-export type CardProps = {
+export interface CardProps {
   name: string;
   time: string;
-};
+}
 
 export function Card(props: CardProps) {
   return (
