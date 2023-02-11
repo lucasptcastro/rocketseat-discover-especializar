@@ -2,10 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Card, CardProps } from "../../components/Card"; // Dá para importar uma interface de outro arquivo
 import "./styles.css";
 
+interface ProfileResponse {
+  name: string;
+  avatar: string;
+}
+interface User {
+  name: string;
+  avatar: string;
+}
+
 export function Home() {
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState<CardProps[]>([]);
-  const [user, setUser] = useState({ name: "", avatar: "" });
+  const [user, setUser] = useState<User>({} as User);
 
   function handleAddStudent() {
     const newStudent = {
