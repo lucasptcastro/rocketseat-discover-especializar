@@ -1,9 +1,14 @@
 ("==========================================================");
 
-//  "user: string | null" = o "user" pode ser string ou nulo
-//  "user ?? "Usário padrão"" = se o "user" for nulo, vai retornar "Usuário padrão"
+/*
 
-//  any: aceita qualquer tipagem
+  "user: string | null" = o "user" pode ser string ou nulo
+
+  "user ?? "Usário padrão"" = se o "user" for nulo, vai retornar "Usuário padrão"
+
+  any: aceita qualquer tipagem
+
+*/
 
 function showTicket(user: string | null, ticket: any) {
   console.log(
@@ -14,13 +19,15 @@ showTicket(null, 123);
 
 ("==========================================================");
 
-//  Generics: a tipagem que for usada na declaração é a que vai definir a variável
+/*  Generics: a tipagem que for usada na declaração é a que vai definir a variável
 
-//  S => State
-//  T => Type
-//  V => Value
-//  K => Key
-//  E => Element
+  S => State
+  T => Type
+  V => Value
+  K => Key
+  E => Element
+
+*/
 
 // Se "T" não for definido como string ou number, ele será string.
 // O "extends" é para poder definir mais de uma tipagem

@@ -45,6 +45,18 @@ function sumNumbers(a: number, b: number): number {
   return a + b;
 }
 
+("Interface =================================================");
+
+interface User2 {
+  id: number;
+  name: string;
+}
+
+function getUser(user: User2) {
+  user.id = 5;
+  user.name = "Lucas";
+}
+
 ("==========================================================");
 
 //  O operador union "|" serve como um "ou", ou seja:
@@ -103,18 +115,6 @@ let player: Player = {
   name: "Lucas",
   nickName: "Raroni",
 };
-
-("Interface =================================================");
-
-interface User2 {
-  id: number;
-  name: string;
-}
-
-function getUser(user: User2) {
-  user.id = 5;
-  user.name = "Lucas";
-}
 
 ("==========================================================");
 
