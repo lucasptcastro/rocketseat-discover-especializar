@@ -1,1 +1,1 @@
-# Repositório de estudos baseado no rocketseat-discover-especializar
+# Repositório de estudos baseado no rocketseat-especializar
