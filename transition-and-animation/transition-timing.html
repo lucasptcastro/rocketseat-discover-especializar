@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transition Timing</title>
+    <style>
+      .line {
+        width: 100%;
+        background-color: blueviolet;
+        height: 25px;
+        margin-bottom: 10px;
+
+        transition: width;
+        transition-duration: 1s;
+      }
+      body:hover .line {
+        width: 20px;
+        background-color: aquamarine;
+      }
+
+      .ease {
+        transition-timing-function: ease;
+      }
+      .linear {
+        transition-timing-function: linear;
+      }
+      .ease-in {
+        transition-timing-function: ease-in;
+      }
+      .ease-out {
+        transition-timing-function: ease-out;
+      }
+      .ease-in-out {
+        transition-timing-function: ease-in-out;
+      }
+      .cube {
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line ease">EASE</div>
+    <div class="line linear">LINEAR</div>
+    <div class="line ease-in">EASE-IN</div>
+    <div class="line ease-out">EASE-OUT</div>
+    <div class="line ease-in-out">EASE-IN-OUT</div>
+    <div class="line cube">CUBE</div>
+  </body>
+</html>
