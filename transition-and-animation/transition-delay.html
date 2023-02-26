@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box-red {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+      }
+      .box-red {
+        background-color: red;
+        transition: background-color 3s;
+      }
+      .box-red:hover {
+        background-color: blueviolet;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-delay: 3s;
+      }
+    </style>
+    <title>Transition Delay</title>
+  </head>
+  <body>
+    <div class="box-red"></div>
+  </body>
+</html>
