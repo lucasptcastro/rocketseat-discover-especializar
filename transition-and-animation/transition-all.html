@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box-red,
+      .box-green {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+      }
+      .box-red {
+        background-color: red;
+        transition: background-color 3s;
+      }
+      .box-red:hover {
+        background-color: blueviolet;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-delay: 3s;
+      }
+      .box-green {
+        background-color: darkolivegreen;
+        transition: all 1s linear 1s;
+      }
+      .box-green:hover {
+        transition: all 1s cubic-bezier(0.29, 1.01, 1, -0.68);
+        background-color: bisque;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+      }
+    </style>
+    <title>Transition All</title>
+  </head>
+  <body>
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+  </body>
+</html>
