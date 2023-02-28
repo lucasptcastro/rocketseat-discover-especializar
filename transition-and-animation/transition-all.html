@@ -9,7 +9,9 @@
         height: 100vh;
       }
       .box-red,
-      .box-green {
+      .box-green,
+      .box-blue,
+      .box-purple {
         height: 100px;
         width: 100px;
         border-radius: 100%;
@@ -36,11 +38,29 @@
         height: 300px;
         border-radius: 8px;
       }
+      .box-blue {
+        background-color: cornflowerblue;
+        transition: width 1.5s linear 0s;
+      }
+      .box-blue:hover {
+        transition: width 2s ease-in-out 0s;
+        width: 300px;
+      }
+      .box-purple {
+        background-color: darkslateblue;
+        transition: opacity 2s linear 0s;
+      }
+      .box-purple:hover {
+        transition: opacity 1s linear 0s;
+        opacity: 0;
+      }
     </style>
     <title>Transition All</title>
   </head>
   <body>
     <div class="box-red"></div>
     <div class="box-green"></div>
+    <div class="box-blue"></div>
+    <div class="box-purple"></div>
   </body>
 </html>
