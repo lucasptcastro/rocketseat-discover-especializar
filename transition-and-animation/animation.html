@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation</title>
+    <style>
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: aquamarine;
+        position: relative;
+
+        /* Precisa referênciar as animações */
+        animation-name: example-one;
+        animation-duration: 4s;
+      }
+
+      /* 
+      
+      Esta é a estrutura para criar uma animação
+      Usa o @keyframes 'nome-da-animação'
+
+      from => como a animação vai começar
+      to => como a animação vai terminar
+      
+      */
+      @keyframes example-one {
+        from {
+          background-color: blueviolet;
+        }
+        to {
+          background-color: burlywood;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>
