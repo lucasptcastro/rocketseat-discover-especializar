@@ -12,7 +12,7 @@
 
         /* Precisa referênciar as animações */
         animation-name: example-two;
-        animation-duration: 7s;
+        animation-duration: 5s;
       }
 
       /* 
@@ -37,15 +37,29 @@
       @keyframes example-two {
         0% {
           background-color: bisque;
+          left: 0;
+          top: 0;
         }
         25% {
           background-color: brown;
+          left: 200px;
+          top: 0;
         }
         50% {
           background-color: chartreuse;
+          left: 200px;
+          top: 200px;
         }
+        75% {
+          background-color: darkgoldenrod;
+          left: 0;
+          top: 200px;
+        }
+
         100% {
           background-color: darkcyan;
+          left: 0;
+          top: 0;
         }
       }
     </style>
