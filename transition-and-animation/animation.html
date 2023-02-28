@@ -11,8 +11,8 @@
         position: relative;
 
         /* Precisa referênciar as animações */
-        animation-name: example-one;
-        animation-duration: 4s;
+        animation-name: example-two;
+        animation-duration: 7s;
       }
 
       /* 
@@ -22,6 +22,7 @@
 
       from => como a animação vai começar
       to => como a animação vai terminar
+      % => a animação reage a partir da porcentagem setada
       
       */
       @keyframes example-one {
@@ -30,6 +31,21 @@
         }
         to {
           background-color: burlywood;
+        }
+      }
+
+      @keyframes example-two {
+        0% {
+          background-color: bisque;
+        }
+        25% {
+          background-color: brown;
+        }
+        50% {
+          background-color: chartreuse;
+        }
+        100% {
+          background-color: darkcyan;
         }
       }
     </style>
