@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation Fill Mode</title>
+    <style>
+      .ball {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        border-radius: 100%;
+        position: relative;
+
+        animation-name: example;
+        animation-duration: 2s;
+        animation-delay: 1s;
+
+        /* A animação termina no estilo que tiver setado no 'to' */
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes example {
+        from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - 100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>
